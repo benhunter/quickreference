@@ -1,0 +1,3 @@
+# print without a newline character:
+print(text, end=' ')
+
