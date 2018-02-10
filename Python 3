@@ -1,3 +1,6 @@
 # print without a newline character:
 print(text, end=' ')
 
+# smallest possible number
+float('-inf')
+
