@@ -1,0 +1,7 @@
+# Ubuntu version
+lsb_release -a
+
+# Kernel info
+uname -a
+
+
