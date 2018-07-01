@@ -8,9 +8,8 @@ float('-inf')
 import pdb; pdb.set_trace()
 
 # pytest testing framework
-
-# pytest mocking input() with test class
-# https://stackoverflow.com/questions/35851323/pytest-how-to-test-a-function-with-input-call
+## pytest mocking input() with test class
+## https://stackoverflow.com/questions/35851323/pytest-how-to-test-a-function-with-input-call
 import module  # The module which contains the call to input
 
 class TestClass:
@@ -31,15 +30,17 @@ class TestClass:
         # This method is being called after each test case, and it will revert input back to original function
         module.input = input
 
-# pytest mocking input() with test function
-import mock
-import module
+## pytest mocking input() with test function
+import unittest.mock
+import builtins
+
 
 def test_function():
-    with mock.patch.object(__builtin__, 'input', lambda: 'some_input'):
+    with unittest.mock.patch.object(builtins, 'input', lambda: 'some_input'):
         assert module.function() == 'expected_output'
 
-# pytest monkeypatch
+
+## pytest monkeypatch
 def test_something_that_involves_user_input(monkeypatch):
     # monkeypatch the "input" function, so that it returns "Mark".
     # This simulates the user entering "Mark" in the terminal:
