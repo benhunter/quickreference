@@ -1,8 +1,0 @@
-# print without a newline character:
-print(text, end=' ')
-
-# smallest possible number
-float('-inf')
-
-# open pdb anywhere in code
-import pdb; pdb.set_trace()
