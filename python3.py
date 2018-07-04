@@ -65,6 +65,10 @@ def groups(seq, length):
         # print(i)
         yield seq[i:i + length]
 
+# Unicode / Encodings
+# view the encodings and non-printable characters in a string:
+s = '\xa0'
+s.encode('raw_unicode_escape')
 
 
 
