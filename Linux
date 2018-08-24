@@ -4,4 +4,7 @@ lsb_release -a
 # Kernel info
 uname -a
 
+# GDB config
+~/.gdbinit
+    set disassembly-flavor intel
 
