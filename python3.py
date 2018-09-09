@@ -1,3 +1,6 @@
+# execute python commands directly
+>python -c "print('A'*65)"
+
 # print without a newline character:
 print(text, end=' ')
 
