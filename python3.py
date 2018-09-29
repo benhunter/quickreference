@@ -1,18 +1,18 @@
-# execute python commands directly
+## execute python commands directly
 >python -c "print('A'*65)"
 
-# print without a newline character:
+## print without a newline character:
 print(text, end=' ')
 
-# smallest possible number
+## smallest possible number
 float('-inf')
 
-# open pdb anywhere in code
+## open pdb anywhere in code
 import pdb; pdb.set_trace()
 
-# pytest testing framework
-## pytest mocking input() with test class
-## https://stackoverflow.com/questions/35851323/pytest-how-to-test-a-function-with-input-call
+## pytest testing framework
+# pytest mocking input() with test class
+# https://stackoverflow.com/questions/35851323/pytest-how-to-test-a-function-with-input-call
 import module  # The module which contains the call to input
 
 class TestClass:
@@ -32,6 +32,7 @@ class TestClass:
     def teardown_method(self, method):
         # This method is being called after each test case, and it will revert input back to original function
         module.input = input
+
 
 ## pytest mocking input() with test function
 import unittest.mock
