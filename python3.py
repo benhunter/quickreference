@@ -92,3 +92,22 @@ $ pip install -r requirements.txt
 $ python -m venv my-venv
 $ source my-venv/bin/activate
 $ pip install 
+
+
+## coverage.py
+# TODO
+
+
+## __repr__
+class Something:
+    def __repr__(self):
+        return "<description>"
+
+instance = Something()
+print(instance)
+
+
+## Async IO
+# TODO
+
+
