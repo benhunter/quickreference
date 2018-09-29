@@ -111,3 +111,10 @@ print(instance)
 # TODO
 
 
+## pprint
+from pprint import pprint
+import requests
+
+pprint([x**2 for x in range(10)])
+
+
