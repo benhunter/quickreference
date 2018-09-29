@@ -93,6 +93,9 @@ $ python -m venv my-venv
 $ source my-venv/bin/activate
 $ pip install 
 
+# comparison of virtual enviroment tools: 
+# https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe
+
 
 ## coverage.py
 # TODO

@@ -8,3 +8,17 @@ uname -a
 ~/.gdbinit
     set disassembly-flavor intel
 
+# download a complete webpage and fix links for offline viewing
+wget -p -k <url>
+
+# reset a git repository to the master, preserving commits in new branch
+git checkout master
+git branch new-branch-for-commits
+# preserve uncommited changes
+git stash
+# removing any local changes that aren't commited in new branch or stashed
+git fetch --all
+git reset --hard origin/master
+# reapply uncommitted changes
+git stash pop
+
