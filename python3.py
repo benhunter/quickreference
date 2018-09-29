@@ -37,7 +37,6 @@ class TestClass:
 import unittest.mock
 import builtins
 
-
 def test_function():
     with unittest.mock.patch.object(builtins, 'input', lambda: 'some_input'):
         assert module.function() == 'expected_output'
@@ -53,7 +52,8 @@ def test_something_that_involves_user_input(monkeypatch):
     i = input("What is your name?")
     assert i == "Mark"
 
-# yield groups of specific size from a sequence
+
+## yield groups of specific size from a sequence
 def groups(seq, length):
     '''
     Yield groups of specified length from a sequence. The final yield will provide whatever data is left in the
@@ -68,10 +68,26 @@ def groups(seq, length):
         # print(i)
         yield seq[i:i + length]
 
-# Unicode / Encodings
+
+## Unicode / Encodings
 # view the encodings and non-printable characters in a string:
 s = '\xa0'
 s.encode('raw_unicode_escape')
 
 
+## Unique User ID
+import uuid
 
+user_id = uuid.uuid4()
+print(user_id)
+
+
+## pip
+$ pip freeze > requirements.txt
+$ pip install -r requirements.txt
+
+
+## venv Virtual Environments in Python 3 Standard Library
+$ python -m venv my-venv
+$ source my-venv/bin/activate
+$ pip install 
