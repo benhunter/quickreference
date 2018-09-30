@@ -4,7 +4,7 @@
 ## print without a newline character:
 print(text, end=' ')
 
-## smallest possible number
+## lowest possible number for comparisons
 float('-inf')
 
 ## open pdb anywhere in code
@@ -34,7 +34,7 @@ class TestClass:
         module.input = input
 
 
-## pytest mocking input() with test function
+## using unittest.mock mocking input() with test function
 import unittest.mock
 import builtins
 
