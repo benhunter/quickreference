@@ -32,3 +32,6 @@ sed -i 's/original/new/g' file.txt
 # new = the text to replace it with
 # g = global (i.e. replace all and not just the first occurrence)
 # file.txt = the file name
+
+# Check a webserver's info in HTTP Header Response (Apache)
+curl --head http://your.webserver.com/
