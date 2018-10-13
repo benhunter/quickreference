@@ -1,3 +1,5 @@
+## Linux Quick Reference
+
 # Ubuntu version
 lsb_release -a
 
@@ -35,3 +37,13 @@ sed -i 's/original/new/g' file.txt
 
 # Check a webserver's info in HTTP Header Response (Apache)
 curl --head http://your.webserver.com/
+
+# wget entire page and fix links for offline viewing
+wget -p -k http://www.example.com/
+
+## grep
+# exclude phrase
+grep -v "phrase"
+
+
+
