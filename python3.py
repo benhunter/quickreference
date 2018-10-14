@@ -97,10 +97,6 @@ $ pip install
 # https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe
 
 
-## coverage.py
-# TODO
-
-
 ## __repr__
 class Something:
     def __repr__(self):
@@ -110,10 +106,6 @@ instance = Something()
 print(instance)
 
 
-## Async IO
-# TODO
-
-
 ## pprint
 from pprint import pprint
 import requests
@@ -121,3 +113,6 @@ import requests
 pprint([x**2 for x in range(10)])
 
 
+## requests TODO
+## Async IO TODO
+## coverage.py TODO
