@@ -1,3 +1,5 @@
+### Python 3 Quick Reference
+
 ## execute python commands directly
 >python -c "print('A'*65)"
 
@@ -95,6 +97,15 @@ $ pip install
 
 # comparison of virtual enviroment tools: 
 # https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe
+
+## logging
+import logging
+# Configure logging with timestamp and log level. Name the log file by date.
+logging.basicConfig(format='%(asctime)s %(levelname)s:%(message)s',
+                        level=logging.DEBUG,
+                        filename=time.strftime('%Y_%m_%d') + '.log',
+                        filemode='a+')
+logging.info('Message')
 
 
 ## __repr__
