@@ -127,8 +127,10 @@ print(instance)
 
 ## pprint
 from pprint import pprint
+
+## requests
 import requests
+# TODO
 
 pprint([x**2 for x in range(10)])
-
 
