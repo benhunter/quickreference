@@ -34,6 +34,10 @@ systemctl start ssh.service
 systemctl status ssh.service
 systemctl stop ssh.service
 
+# check apt sources: /etc/apt/sources.list:
+deb http://http.kali.org/kali kali-rolling main non-free contrib
+deb-src http://http.kali.org/kali kali-rolling main non-free contrib
+
 # update everything
 apt-get update && apt-get upgrade && apt-get dist-upgrade
 
@@ -50,3 +54,4 @@ apt install virtualbox-guest-x11
     # TODO test bluetooth instructions for raspi
 # https://lmgsecurity.com/enable-start-ssh-kali-linux/
 # https://docs.kali.org/general-use/kali-linux-virtual-box-guest
+# https://docs.kali.org/general-use/kali-linux-sources-list-repositories
