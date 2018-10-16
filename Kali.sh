@@ -1,4 +1,5 @@
 ### Kali Linux Quick Reference
+# Tested against Kali Linux 2018.3
 
 ## Setup VM
 
@@ -12,8 +13,13 @@ root:toor
 # change password
 passwd root
 
+# set static IP address
+# TODO
+service networking restart
+
 # generate new ssh keys
 cd /etc/ssh/
+rm /etc/ssh/ssh_host_*
 dpkg-reconfigure openssh-server
 
 # setup sshd to run at boot
@@ -21,11 +27,26 @@ update-rc.d -f ssh remove
 update-rc.d -f ssh defaults
 nano /etc/ssh/sshd_config
 # verify 'PermitRootLogin yes' is not commented
+systemctl enable ssh.service
+
+# run sshd temporarily
+systemctl start ssh.service
+systemctl status ssh.service
+systemctl stop ssh.service
 
 # update everything
 apt-get update && apt-get upgrade && apt-get dist-upgrade
 
+# add the VirtualBox guest additions
+apt install virtualbox-guest-x11
+
+# add a keyboard shortcut for 'gnome-terminal' to Ctrl+Alt+T
+
+
+
 
 ## References
 # https://null-byte.wonderhowto.com/how-to/build-beginner-hacking-kit-with-raspberry-pi-3-model-b-0184144/
-
+    # TODO test bluetooth instructions for raspi
+# https://lmgsecurity.com/enable-start-ssh-kali-linux/
+# https://docs.kali.org/general-use/kali-linux-virtual-box-guest
