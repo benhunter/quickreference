@@ -28,6 +28,12 @@ git stash pop
 # store credentials
 git config --global credential.helper store
 
+# Pull updates for all git repos in a directory
+find . -type d -maxdepth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;
+# test command
+find . -type d -depth 1 -exec echo git --git-dir={}/.git --work-tree=$PWD/{} status \;
+
+
 
 # find and replace all in a file:
 sed -i 's/original/new/g' file.txt
@@ -50,5 +56,6 @@ wget -p -k http://www.example.com/
 # exclude phrase
 grep -v "phrase"
 
-
+## References
+# https://stackoverflow.com/questions/3497123/run-git-pull-over-all-subdirectories
 
