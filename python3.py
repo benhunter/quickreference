@@ -127,3 +127,16 @@ pprint([x**2 for x in range(10)])
 ## requests TODO
 ## Async IO TODO
 ## coverage.py TODO
+
+## Paths, Directories
+from pathlib import Path
+here = Path(__file__).absolute().parent
+conf_dir = Path.home().joinpath('.config')
+with here.joinpath('requirements.txt').open() as reqs:
+    return list([req.strip() for req in reqs if req.strip()])
+
+
+
+
+
+
