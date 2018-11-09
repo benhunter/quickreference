@@ -56,6 +56,14 @@ wget -p -k http://www.example.com/
 # exclude phrase
 grep -v "phrase"
 
+# see what TTY you are on
+tty
+
+# what is my public IP?
+curl https://ipinfo.io/ip
+wget -qO - https://ipinfo.io/ip
+
+
 ## References
 # https://stackoverflow.com/questions/3497123/run-git-pull-over-all-subdirectories
 

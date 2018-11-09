@@ -136,6 +136,14 @@ with here.joinpath('requirements.txt').open() as reqs:
     return list([req.strip() for req in reqs if req.strip()])
 
 
+## Getting all the lines from a file and removing the '\n'
+# 1 - pull the whole file into memory and split into lines without '\n':
+with open(filename) as f:
+    mylist = f.read().splitlines()
+
+# 2 - iterate the lines and strip the whitespace
+with open(filename) as f:
+    alist = [line.rstrip() for line in f]
 
 
 
