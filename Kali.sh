@@ -39,14 +39,15 @@ deb http://http.kali.org/kali kali-rolling main non-free contrib
 deb-src http://http.kali.org/kali kali-rolling main non-free contrib
 
 # update everything
-apt-get update && apt-get upgrade && apt-get dist-upgrade
+apt-get update; apt upgrade && apt full-upgrade
 
 # add the VirtualBox guest additions
 apt install virtualbox-guest-x11
 
 # add a keyboard shortcut for 'gnome-terminal' to Ctrl+Alt+T
 
-
+# check Kali version
+grep VERSION /etc/os-release
 
 
 ## References
