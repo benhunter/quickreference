@@ -52,7 +52,8 @@ grep VERSION /etc/os-release
 
 ## Tools
 # Seclists
-cd /usr/share/wordlists; git clone https://github.com/danielmiessler/SecLists
+apt install seclists
+#cd /usr/share/wordlists; git clone https://github.com/danielmiessler/SecLists
 
 ## References
 # https://null-byte.wonderhowto.com/how-to/build-beginner-hacking-kit-with-raspberry-pi-3-model-b-0184144/
