@@ -63,6 +63,10 @@ tty
 curl https://ipinfo.io/ip
 wget -qO - https://ipinfo.io/ip
 
+# Disable vim automatic visual mode on mouse select
+# add to ~/.vimrc: set mouse-=a
+
+
 
 ## References
 # https://stackoverflow.com/questions/3497123/run-git-pull-over-all-subdirectories
