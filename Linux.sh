@@ -11,6 +11,8 @@ uname -a
     set disassembly-flavor intel
 
 # download a complete webpage and fix links for offline viewing
+# -p, --page-requisites get all resources needed to display page
+# -k --convert-links point links to local files
 wget -p -k <url>
 
 ## Git
