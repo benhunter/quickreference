@@ -69,6 +69,8 @@ wget -qO - https://ipinfo.io/ip
 # Disable vim automatic visual mode on mouse select
 # add to ~/.vimrc: set mouse-=a
 
+# zip a directory and contents recursively
+zip -r archive.zip directory
 
 
 ## References
