@@ -72,6 +72,8 @@ wget -qO - https://ipinfo.io/ip
 # zip a directory and contents recursively
 zip -r archive.zip directory
 
+# View directory sizes sorted, in human readable format
+du -h --max-depth=1 | sort -hr
 
 ## References
 # https://stackoverflow.com/questions/3497123/run-git-pull-over-all-subdirectories
