@@ -145,6 +145,16 @@ with open(filename) as f:
 with open(filename) as f:
     alist = [line.rstrip() for line in f]
 
+## Check the existence of a variable
+# To check the existence of a local variable:
+if 'myVar' in locals():
+  # myVar exists.
+# To check the existence of a global variable:
+if 'myVar' in globals():
+  # myVar exists.
+# To check if an object has an attribute:
+if hasattr(obj, 'attr_name'):
+  # obj.attr_name exists.
 
 
 
