@@ -1,5 +1,20 @@
 ### Python 3 Quick Reference
 
+## pip
+$ pip freeze > requirements.txt
+$ pip install -r requirements.txt
+
+## venv Virtual Environments in Python 3 Standard Library
+$ python -m venv my-venv
+$ source my-venv/bin/activate
+$ pip install 
+
+# Activate virtual environment on Windows PowerShell:
+PS >.\my-venv\Scripts\Activate.ps1
+
+# comparison of virtual enviroment tools: 
+# https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe
+
 ## execute python commands directly
 >python -c "print('A'*65)"
 
@@ -84,19 +99,6 @@ import uuid
 user_id = uuid.uuid4()
 print(user_id)
 
-
-## pip
-$ pip freeze > requirements.txt
-$ pip install -r requirements.txt
-
-
-## venv Virtual Environments in Python 3 Standard Library
-$ python -m venv my-venv
-$ source my-venv/bin/activate
-$ pip install 
-
-# comparison of virtual enviroment tools: 
-# https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe
 
 ## logging
 import logging
