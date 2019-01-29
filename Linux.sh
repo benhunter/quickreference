@@ -66,8 +66,13 @@ tty
 curl https://ipinfo.io/ip
 wget -qO - https://ipinfo.io/ip
 
+## VIM
 # Disable vim automatic visual mode on mouse select
 # add to ~/.vimrc: set mouse-=a
+
+# write a file that was opened read-only
+:w !sudo tee %
+
 
 # zip a directory and contents recursively
 zip -r archive.zip directory
