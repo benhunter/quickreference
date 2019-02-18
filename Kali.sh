@@ -49,6 +49,9 @@ apt install virtualbox-guest-x11
 # check Kali version
 grep VERSION /etc/os-release
 
+# check kernel version
+uname -a
+
 
 ## Tools
 # Seclists
