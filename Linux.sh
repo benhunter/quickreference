@@ -1,45 +1,38 @@
 ## Linux Quick Reference
 
-# Ubuntu version
-lsb_release -a
+lsb_release -a  # Ubuntu version
 
-# Kernel info
-uname -a
+uname -a  # Kernel info
 
-# GDB config
-~/.gdbinit
+
+~/.gdbinit  # GNU Debugger (GDB) config
     set disassembly-flavor intel
 
-# download a complete webpage and fix links for offline viewing
-# https://www.gnu.org/software/wget/manual/html_node/Recursive-Retrieval-Options.html
+wget -E -H -k -K -p <url>  # download a complete webpage and fix links for offline viewing
 # -p, --page-requisites get all resources needed to display page
 # -k --convert-links point links to local files
-wget -E -H -k -K -p <url>
 
 ## Git
 # reset a git repository to the master, preserving commits in new branch
 git checkout master
 git branch new-branch-for-commits
-# preserve uncommited changes
-git stash
+git stash  # preserve uncommited changes
 # removing any local changes that aren't commited in new branch or stashed
 git fetch --all
 git reset --hard origin/master
-# reapply uncommitted changes
-git stash pop
+git stash pop# reapply uncommitted changes
+
 
 # store credentials
 git config --global credential.helper store
 
 # Pull updates for all git repos in a directory
 find . -type d -maxdepth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;
-# test command
+# test command - git status
 find . -type d -depth 1 -exec echo git --git-dir={}/.git --work-tree=$PWD/{} status \;
 
 
-
-# find and replace all in a file:
-sed -i 's/original/new/g' file.txt
+sed -i 's/original/new/g' file.txt  # find and replace all strings in a file
 # Explanation: sed = Stream EDitor
 # -i = in-place (i.e. save back to the original file)
 # The command string:
@@ -47,20 +40,15 @@ sed -i 's/original/new/g' file.txt
 # original = a regular expression describing the word to replace (or just the word itself)
 # new = the text to replace it with
 # g = global (i.e. replace all and not just the first occurrence)
-# file.txt = the file name
 
-# Check a webserver's info in HTTP Header Response (Apache)
-curl --head http://your.webserver.com/
 
-# wget entire page and fix links for offline viewing
-wget -p -k http://www.example.com/
+curl --head http://your.webserver.com/  # Check a webserver's info in HTTP Header Response (Apache)
 
-## grep
-# exclude phrase
-grep -v "phrase"
+wget -p -k http://www.example.com/  # wget entire page and fix links for offline viewing
 
-# see what TTY you are on
-tty
+grep -v "phrase"  # exclude phrase
+
+tty  # see what TTY you are on
 
 # what is my public IP?
 curl https://ipinfo.io/ip
@@ -74,11 +62,10 @@ wget -qO - https://ipinfo.io/ip
 :w !sudo tee %
 
 
-# zip a directory and contents recursively
-zip -r archive.zip directory
 
-# View directory sizes sorted, in human readable format
-du -h --max-depth=1 | sort -hr
+zip -r archive.zip directory  # zip a directory and contents recursively
+
+du -h --max-depth=1 | sort -hr  # View directory sizes sorted, in human readable format
 
 # kill other login sessions:
 w # view sessions, or who
@@ -87,6 +74,6 @@ ps -fu username # show a user's processes, -f full format listing
 kill -HUP pid # process ID for other session
 
 
-
 ## References
+# https://www.gnu.org/software/wget/manual/html_node/Recursive-Retrieval-Options.html
 # https://stackoverflow.com/questions/3497123/run-git-pull-over-all-subdirectories
