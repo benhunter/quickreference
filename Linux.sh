@@ -80,6 +80,13 @@ zip -r archive.zip directory
 # View directory sizes sorted, in human readable format
 du -h --max-depth=1 | sort -hr
 
+# kill other login sessions:
+w # view sessions, or who
+tty # see what our session is
+ps -fu username # show a user's processes, -f full format listing
+kill -HUP pid # process ID for other session
+
+
+
 ## References
 # https://stackoverflow.com/questions/3497123/run-git-pull-over-all-subdirectories
-
