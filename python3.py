@@ -92,6 +92,9 @@ def groups(seq, length):
 s = '\xa0'
 s.encode('raw_unicode_escape')
 
+## Strings
+# remove all whitespace from string s
+"".join(s.split())
 
 ## Unique User ID
 import uuid
