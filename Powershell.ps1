@@ -19,3 +19,10 @@ Get-ExecutionPolicy
 Set-ExecutionPolicy Unrestricted
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force
+
+## Environment Variables
+# Get and Set User Environment Variables
+[System.Environment]::GetEnvironmentVariable('VARIABLE_NAME', [System.EnvironmentVariableTarget]::User)
+[System.Environment]::SetEnvironmentVariable('VARIABLE_NAME', $value, [System.EnvironmentVariableTarget]::User)
+
+
