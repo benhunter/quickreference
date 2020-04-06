@@ -162,4 +162,8 @@ if hasattr(obj, 'attr_name'):
   # obj.attr_name exists.
 
 
+## Web Server HTTP in current directory
+#   # python3 -m http.server 80
 
+# Python 2
+#   # python -m SimpleHttpServer 80
