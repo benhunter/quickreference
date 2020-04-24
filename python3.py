@@ -7,13 +7,18 @@ $ pip install -r requirements.txt
 ## venv Virtual Environments in Python 3 Standard Library
 $ python -m venv my-venv
 $ source my-venv/bin/activate
-$ pip install 
+$ pip install
 
 # Activate virtual environment on Windows PowerShell:
 PS >.\my-venv\Scripts\Activate.ps1
 
 # comparison of virtual enviroment tools: 
 # https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe
+
+## If pip isn't available, bootstrap it from standard library
+# https://docs.python.org/3/library/ensurepip.html
+$ python -m ensurepip --default-pip
+# or https://bootstrap.pypa.io/get-pip.py
 
 ## execute python commands directly
 >python -c "print('A'*65)"
