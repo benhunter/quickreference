@@ -58,6 +58,26 @@ uname -a
 apt install seclists
 #cd /usr/share/wordlists; git clone https://github.com/danielmiessler/SecLists
 
+# Visual Studio Code / VSCode
+# https://snapcraft.io/docs/installing-snap-on-kali
+# Install snapcraft.io store
+sudo apt update
+sudo apt install snapd
+# Additionally, enable and start both the snapd and the snapd.apparmor services with the following command:
+sudo systemctl enable --now snapd apparmor
+# To test your system, install the hello-world snap and make sure it runs correctly:
+# $ snap install hello-world
+# $ hello-world 6.3 from Canonical✓ installed
+# $ hello-world
+# Hello World!
+# Install Snap Store App
+# $ sudo snap install snap-store
+snap install --classic code
+snap run code
+code  # if '/snap/bin' is in $PATH
+export PATH="$PATH:/snap/bin"  # add the snap bin path to $PATH (not permanent unless in .bash_profile or .bashrc)
+echo $PATH  # verify
+
 ## References
 # https://null-byte.wonderhowto.com/how-to/build-beginner-hacking-kit-with-raspberry-pi-3-model-b-0184144/
     # TODO test bluetooth instructions for raspi

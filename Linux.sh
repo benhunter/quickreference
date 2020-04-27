@@ -73,6 +73,8 @@ tty # see what our session is
 ps -fu username # show a user's processes, -f full format listing
 kill -HUP pid # process ID for other session
 
+# infinite while loop one liner
+$ while :; do ping google.com; done
 
 ## References
 # https://www.gnu.org/software/wget/manual/html_node/Recursive-Retrieval-Options.html
