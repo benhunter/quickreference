@@ -78,6 +78,19 @@ code  # if '/snap/bin' is in $PATH
 export PATH="$PATH:/snap/bin"  # add the snap bin path to $PATH (not permanent unless in .bash_profile or .bashrc)
 echo $PATH  # verify
 
+
+# for installing python programs
+# example https://github.com/Ganapati/RsaCtfTool
+sudo apt install python3-venv
+
+git clone https://github.com/Ganapati/RsaCtfTool
+python3 -m venv --system-site-packages venv
+source ./venv/bin/activate
+sudo apt install libmpfr-dev
+pip install -r requirements.txt 
+# SageMath package was removed from kali apt...
+
+
 ## References
 # https://null-byte.wonderhowto.com/how-to/build-beginner-hacking-kit-with-raspberry-pi-3-model-b-0184144/
     # TODO test bluetooth instructions for raspi
