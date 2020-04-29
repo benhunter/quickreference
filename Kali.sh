@@ -89,6 +89,7 @@ source ./venv/bin/activate
 sudo apt install libmpfr-dev
 pip install -r requirements.txt 
 # SageMath package was removed from kali apt...
+deactivate  # exit virtual environment
 
 
 ## References
