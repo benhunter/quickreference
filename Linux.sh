@@ -76,6 +76,10 @@ kill -HUP pid # process ID for other session
 # infinite while loop one liner
 $ while :; do ping google.com; done
 
+
+# open file manager here
+xdg-open .
+
 ## References
 # https://www.gnu.org/software/wget/manual/html_node/Recursive-Retrieval-Options.html
 # https://stackoverflow.com/questions/3497123/run-git-pull-over-all-subdirectories

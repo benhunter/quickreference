@@ -92,6 +92,12 @@ pip install -r requirements.txt
 deactivate  # exit virtual environment
 
 
+# Unpack RockYou.txt wordlist
+gunzip /usr/share/wordlists/rockyou.txt.gz
+
+# Look at wordlists
+tree -lahsf /usr/share/wordlists/ -L 3 | less
+
 ## References
 # https://null-byte.wonderhowto.com/how-to/build-beginner-hacking-kit-with-raspberry-pi-3-model-b-0184144/
     # TODO test bluetooth instructions for raspi
