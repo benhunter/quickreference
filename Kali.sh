@@ -102,6 +102,10 @@ tree -lahsf /usr/share/wordlists/ -L 3 | less
 # https://0xrick.github.io/lists/stego/
 sudo gem install zsteg
 
+
+sudo apt install ssss  # ssss - Shamir's secret sharing scheme
+sudo apt install libimage-exiftool-perl  # ExifTool https://github.com/exiftool/exiftool
+
 ## References
 # https://null-byte.wonderhowto.com/how-to/build-beginner-hacking-kit-with-raspberry-pi-3-model-b-0184144/
     # TODO test bluetooth instructions for raspi

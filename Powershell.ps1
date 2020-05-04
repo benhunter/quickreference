@@ -30,4 +30,5 @@ $env:VARIABLE_NAME # Get
 [System.Environment]::GetEnvironmentVariable('VARIABLE_NAME', [System.EnvironmentVariableTarget]::User)
 [System.Environment]::SetEnvironmentVariable('VARIABLE_NAME', $value, [System.EnvironmentVariableTarget]::User)
 
-
+# Linux less equivalent
+out-host -paging

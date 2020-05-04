@@ -65,6 +65,11 @@ wget -qO - https://ipinfo.io/ip
 
 zip -r archive.zip directory  # zip a directory and contents recursively
 
+tar xvzf file.tar.gz  # Extract tar.gz
+
+7z e compressed.7z  # extract
+7z a new-`date -u +%Y-%m-%d-%H%M%SZ`.7z ./folder/  # compress with datetime name
+
 du -h --max-depth=1 | sort -hr  # View directory sizes sorted, in human readable format
 
 # kill other login sessions:

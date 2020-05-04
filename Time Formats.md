@@ -5,7 +5,9 @@
 ## File or Path Friendly
 
 ### Linux/Bash
+    date -u +%Y-%m-%d-%H%M%SZ  # With dashes
     date -u +%Y%m%dT%H%M%SZ
+
 
 ### PowerShell
     Get-Date -Format FileDateTimeUniversal  # yyyyMMddTHHmmssffffZ - UTC
