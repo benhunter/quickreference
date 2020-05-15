@@ -1,9 +1,7 @@
 ## Linux Quick Reference
 
 lsb_release -a  # Ubuntu version
-
 uname -a  # Kernel info
-
 
 ~/.gdbinit  # GNU Debugger (GDB) config
     set disassembly-flavor intel
@@ -11,6 +9,12 @@ uname -a  # Kernel info
 wget -E -H -k -K -p <url>  # download a complete webpage and fix links for offline viewing
 # -p, --page-requisites get all resources needed to display page
 # -k --convert-links point links to local files
+wget -p -k http://www.example.com/  # wget entire page and fix links for offline viewing
+curl --head http://your.webserver.com/  # Check a webserver's info in HTTP Header Response (Apache)
+
+# what is my public IP?
+curl https://ipinfo.io/ip
+wget -qO - https://ipinfo.io/ip
 
 ## Git
 # reset a git repository to the master, preserving commits in new branch
@@ -22,7 +26,6 @@ git fetch --all
 git reset --hard origin/master
 git stash pop# reapply uncommitted changes
 
-
 # store credentials
 git config --global credential.helper store
 
@@ -30,7 +33,6 @@ git config --global credential.helper store
 find . -type d -maxdepth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;
 # test command - git status
 find . -type d -depth 1 -exec echo git --git-dir={}/.git --work-tree=$PWD/{} status \;
-
 
 sed -i 's/original/new/g' file.txt  # find and replace all strings in a file
 # Explanation: sed = Stream EDitor
@@ -41,18 +43,9 @@ sed -i 's/original/new/g' file.txt  # find and replace all strings in a file
 # new = the text to replace it with
 # g = global (i.e. replace all and not just the first occurrence)
 
-
-curl --head http://your.webserver.com/  # Check a webserver's info in HTTP Header Response (Apache)
-
-wget -p -k http://www.example.com/  # wget entire page and fix links for offline viewing
-
 grep -v "phrase"  # exclude phrase
 
 tty  # see what TTY you are on
-
-# what is my public IP?
-curl https://ipinfo.io/ip
-wget -qO - https://ipinfo.io/ip
 
 ## VIM
 # Disable vim automatic visual mode on mouse select
@@ -61,14 +54,12 @@ wget -qO - https://ipinfo.io/ip
 # write a file that was opened read-only
 :w !sudo tee %
 
-
-
 zip -r archive.zip directory  # zip a directory and contents recursively
 
 tar xvzf file.tar.gz  # Extract tar.gz
 
-7z e compressed.7z  # extract
 7z a new-`date -u +%Y-%m-%d-%H%M%SZ`.7z ./folder/  # compress with datetime name
+7z e compressed.7z  # extract
 
 du -h --max-depth=1 | sort -hr  # View directory sizes sorted, in human readable format
 
@@ -80,7 +71,6 @@ kill -HUP pid # process ID for other session
 
 # infinite while loop one liner
 $ while :; do ping google.com; done
-
 
 # open file manager here
 xdg-open .
