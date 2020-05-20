@@ -23,7 +23,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force
 ## Environment Variables
 # https://ss64.com/ps/syntax-env.html
 # https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-6
-# Session Environment Variables
+# Session Environment Variables (do not persist in user environment)
 $env:VARIABLE_NAME = $value # Set
 $env:VARIABLE_NAME # Get
 # Get and Set User Environment Variables. Uses .NET
