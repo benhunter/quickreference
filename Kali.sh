@@ -46,6 +46,10 @@ apt install virtualbox-guest-x11
 
 # add a keyboard shortcut for 'gnome-terminal' to Ctrl+Alt+T
 
+# install powerline https://github.com/powerline/powerline
+TODO sudo apt install powerline
+TODO config powerline
+
 # check Kali version
 grep VERSION /etc/os-release
 
