@@ -8,10 +8,11 @@
 # set bridged networking
 
 # login with default username password:
-root:toor
+# root:toor  # Old
+# kali:kali  # New
 
 # change password
-passwd root
+# passwd root
 
 # set static IP address
 # TODO
@@ -110,9 +111,11 @@ sudo gem install zsteg
 sudo apt install ssss  # ssss - Shamir's secret sharing scheme
 sudo apt install libimage-exiftool-perl  # ExifTool https://github.com/exiftool/exiftool
 
+
 ## References
 # https://null-byte.wonderhowto.com/how-to/build-beginner-hacking-kit-with-raspberry-pi-3-model-b-0184144/
     # TODO test bluetooth instructions for raspi
 # https://lmgsecurity.com/enable-start-ssh-kali-linux/
 # https://docs.kali.org/general-use/kali-linux-virtual-box-guest
 # https://docs.kali.org/general-use/kali-linux-sources-list-repositories
+# Kali Metapackages https://tools.kali.org/kali-metapackages

@@ -1,0 +1,6 @@
+- Bash scripting https://devhints.io/bash
+- Bash special paramaters and shell variables ($?) https://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables
+- Tmux https://tmuxcheatsheet.com/
+- Htop https://spin.atomicobject.com/2020/02/10/htop-guide/ https://www.maketecheasier.com/power-user-guide-htop/
+- https://devhints.io/datetime
+- Crontab https://crontab.guru/
