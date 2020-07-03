@@ -29,6 +29,15 @@ git stash pop# reapply uncommitted changes
 # store credentials
 git config --global credential.helper store
 
+# Refresh a fork
+# https://forum.gitlab.com/t/refreshing-a-fork/32469/2
+git remote add upstream https://... # if not already added
+git checkout master
+git fetch upstream
+git pull upstream master
+git push origin master
+
+
 # Pull updates for all git repos in a directory
 find . -type d -maxdepth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;
 # test command - git status
