@@ -4,3 +4,4 @@
 - Htop https://spin.atomicobject.com/2020/02/10/htop-guide/ https://www.maketecheasier.com/power-user-guide-htop/
 - https://devhints.io/datetime
 - Crontab https://crontab.guru/
+- Vim https://vim.rtorr.com/
