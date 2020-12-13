@@ -84,6 +84,11 @@ $ while :; do ping google.com; done
 # open file manager here
 xdg-open .
 
+# check Raspberry Pi hardware version
+cat /proc/cpuinfo
+cat /sys/firmware/devicetree/base/model
+
+
 ## References
 # https://www.gnu.org/software/wget/manual/html_node/Recursive-Retrieval-Options.html
 # https://stackoverflow.com/questions/3497123/run-git-pull-over-all-subdirectories
