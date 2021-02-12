@@ -16,32 +16,6 @@ curl --head http://your.webserver.com/  # Check a webserver's info in HTTP Heade
 curl https://ipinfo.io/ip
 wget -qO - https://ipinfo.io/ip
 
-## Git
-# reset a git repository to the master, preserving commits in new branch
-git checkout master
-git branch new-branch-for-commits
-git stash  # preserve uncommited changes
-# removing any local changes that aren't commited in new branch or stashed
-git fetch --all
-git reset --hard origin/master
-git stash pop# reapply uncommitted changes
-
-# store credentials
-git config --global credential.helper store
-
-# Refresh a fork
-# https://forum.gitlab.com/t/refreshing-a-fork/32469/2
-git remote add upstream https://... # if not already added
-git checkout master
-git fetch upstream
-git pull upstream master
-git push origin master
-
-
-# Pull updates for all git repos in a directory
-find . -type d -maxdepth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;
-# test command - git status
-find . -type d -depth 1 -exec echo git --git-dir={}/.git --work-tree=$PWD/{} status \;
 
 sed -i 's/original/new/g' file.txt  # find and replace all strings in a file
 # Explanation: sed = Stream EDitor
@@ -91,4 +65,3 @@ cat /sys/firmware/devicetree/base/model
 
 ## References
 # https://www.gnu.org/software/wget/manual/html_node/Recursive-Retrieval-Options.html
-# https://stackoverflow.com/questions/3497123/run-git-pull-over-all-subdirectories
