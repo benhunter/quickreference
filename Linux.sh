@@ -62,6 +62,8 @@ xdg-open .
 cat /proc/cpuinfo
 cat /sys/firmware/devicetree/base/model
 
+# tree - file and folder viewer
+tree -ah --du -L 2  # show all files, human readable sizes, directory sizes, go down 2 levels
 
 ## References
 # https://www.gnu.org/software/wget/manual/html_node/Recursive-Retrieval-Options.html
