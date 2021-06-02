@@ -32,3 +32,18 @@ $env:VARIABLE_NAME # Get
 
 # Linux less equivalent
 out-host -paging
+
+# Pop up message box
+Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Finished', 'Done')
+
+# List all file system drives
+Get-PSDrive -PSProvider 'FileSystem'
+
+# Single Quotes vs Double Quotes
+# https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_quoting_rules?view=powershell-7.1
+$i = 5
+"The value of $i is $i."  # expanded
+'The value of $i is $i.'  # literal, not expanded
+
+# Robocopy (also available in cmd)
+robocopy $source $dest /zb /MT:32 /s  # requires admin privilege because of /zb. Use /z without admin.
