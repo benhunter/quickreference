@@ -6,7 +6,7 @@ Get-Command python
 
 # Make an alias and store it in user profile
 New-Alias which get-command
-"`nNew-Alias which get-command" | add-content $profile
+"New-Alias which get-command" | add-content $profile
 
 # Check last reboot time
 # Better option 1 using CIM:
@@ -47,3 +47,13 @@ $i = 5
 
 # Robocopy (also available in cmd)
 robocopy $source $dest /zb /MT:32 /s  # requires admin privilege because of /zb. Use /z without admin.
+
+
+
+# Size of the current directory
+$directory = Get-Item .
+$directory | Get-ChildItem | Measure-Object -Sum Length | Select-Object `
+  @{Name=”Path”; Expression={$directory.FullName}}, @{Name=”Files”; Expression={$_.Count}}, @{Name=”Size”; Expression={$_.Sum}}
+
+
+ls -force # include hidden files
