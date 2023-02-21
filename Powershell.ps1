@@ -57,3 +57,7 @@ $directory | Get-ChildItem | Measure-Object -Sum Length | Select-Object `
 
 
 ls -force # include hidden files
+
+# Human readable file size
+ls | Select-Object Name, @{Name="MegaBytes";Expression={$_.Length / 1MB}}
+
