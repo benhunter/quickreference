@@ -1,4 +1,4 @@
-## Linux Quick Reference
+# Linux Quick Reference
 
 lsb_release -a  # Ubuntu version
 uname -a  # Kernel info
@@ -30,7 +30,7 @@ grep -v "phrase"  # exclude phrase
 
 tty  # see what TTY you are on
 
-## VIM
+# VIM
 # Disable vim automatic visual mode on mouse select
 # add to ~/.vimrc: set mouse-=a
 
@@ -65,5 +65,23 @@ cat /sys/firmware/devicetree/base/model
 # tree - file and folder viewer
 tree -ah --du -L 2  # show all files, human readable sizes, directory sizes, go down 2 levels
 
-## References
+# Loop over every line of input with xargs
+echo -e "line1\nline2\nline3" | xargs -I {} echo "Processing: {}"
+
+# Loop over every line of input
+output="line1
+line2
+line3"
+echo "$output" | while IFS= read -r line; do
+  echo "Processing: $line"
+done
+
+# Cut the first 50 characters of a line
+echo $LINE | cut -c 1-50
+
+# Trim whitespace from a string
+wc -l < filename.txt | awk '{print $1}'
+
+
+# References
 # https://www.gnu.org/software/wget/manual/html_node/Recursive-Retrieval-Options.html
