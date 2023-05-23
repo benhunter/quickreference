@@ -39,6 +39,9 @@ tty  # see what TTY you are on
 
 zip -r archive.zip directory  # zip a directory and contents recursively
 
+# Unzip all zips in a directory into their own subdirectories
+for file in *.zip; do mkdir "${file%.*}" && unzip "$file" -d "${file%.*}"; done
+
 tar xvzf file.tar.gz  # Extract tar.gz
 
 7z a new-`date -u +%Y-%m-%d-%H%M%SZ`.7z ./folder/  # compress with datetime name
