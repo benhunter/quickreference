@@ -12,6 +12,9 @@ $ pip install
 # Activate virtual environment on Windows PowerShell:
 PS >.\my-venv\Scripts\Activate.ps1
 
+# Find your site packages. Works for system or virtual environment.
+python -c "import site; print(''.join(site.getsitepackages()))"
+
 # comparison of virtual enviroment tools: 
 # https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe
 
