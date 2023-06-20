@@ -1,16 +1,16 @@
-### Python 3 Quick Reference
+# Python 3 Quick Reference
 
-## pip
+# pip
 $ pip freeze > requirements.txt
-$ pip install -r requirements.txt
+$ pip install - r requirements.txt
 
-## venv Virtual Environments in Python 3 Standard Library
-$ python -m venv my-venv
+# venv Virtual Environments in Python 3 Standard Library
+$ python - m venv my-venv
 $ source my-venv/bin/activate
 $ pip install
 
-# Activate virtual environment on Windows PowerShell:
-PS >.\my-venv\Scripts\Activate.ps1
+# Windows: Activate virtual environment on Windows PowerShell:
+PS > .\my-venv\Scripts\Activate.ps1
 
 # Find your site packages. Works for system or virtual environment.
 python -c "import site; print(''.join(site.getsitepackages()))"
@@ -18,27 +18,27 @@ python -c "import site; print(''.join(site.getsitepackages()))"
 # comparison of virtual enviroment tools: 
 # https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe
 
-## If pip isn't available, bootstrap it from standard library
+# If pip isn't available, bootstrap it from standard library
 # https://docs.python.org/3/library/ensurepip.html
-$ python -m ensurepip --default-pip
+$ python -m ensurepip - -default-pip
 # or https://bootstrap.pypa.io/get-pip.py
 
-## execute python commands directly
->python -c "print('A'*65)"
+# execute python commands directly
+>python - c "print('A'*65)"
 
-## print without a newline character:
+# print without a newline character:
 print(text, end=' ')
 
-## lowest possible number for comparisons
+# lowest possible number for comparisons
 float('-inf')
 
-## open pdb anywhere in code
-import pdb; pdb.set_trace()
+# open pdb anywhere in code
+pdb.set_trace()
 
-## pytest testing framework
+# pytest testing framework
 # pytest mocking input() with test class
 # https://stackoverflow.com/questions/35851323/pytest-how-to-test-a-function-with-input-call
-import module  # The module which contains the call to input
+import module
 
 class TestClass:
 
@@ -59,7 +59,7 @@ class TestClass:
         module.input = input
 
 
-## using unittest.mock mocking input() with test function
+# using unittest.mock mocking input() with test function
 import unittest.mock
 import builtins
 
@@ -68,7 +68,7 @@ def test_function():
         assert module.function() == 'expected_output'
 
 
-## pytest monkeypatch
+# pytest monkeypatch
 def test_something_that_involves_user_input(monkeypatch):
     # monkeypatch the "input" function, so that it returns "Mark".
     # This simulates the user entering "Mark" in the terminal:
@@ -79,7 +79,7 @@ def test_something_that_involves_user_input(monkeypatch):
     assert i == "Mark"
 
 
-## yield groups of specific size from a sequence
+# yield groups of specific size from a sequence
 def groups(seq, length):
     '''
     Yield groups of specified length from a sequence. The final yield will provide whatever data is left in the
@@ -100,46 +100,44 @@ def groups(seq, length):
 s = '\xa0'
 s.encode('raw_unicode_escape')
 
-## Strings
+# Strings
 # remove all whitespace from string s
 "".join(s.split())
 
-## Unique User ID
+# Unique User ID
 import uuid
-
 user_id = uuid.uuid4()
 print(user_id)
 
 
-## logging
+# logging
 import logging
 # Configure logging with timestamp and log level. Name the log file by date.
 logging.basicConfig(format='%(asctime)s %(levelname)s:%(message)s',
-                        level=logging.DEBUG,
-                        filename=time.strftime('%Y_%m_%d') + '.log',
-                        filemode='a+')
+                    level=logging.DEBUG,
+                    filename=time.strftime('%Y_%m_%d') + '.log',
+                    filemode='a+')
 logging.info('Message')
 
 
-## __repr__
+# __repr__
 class Something:
     def __repr__(self):
         return "<description>"
+
 
 instance = Something()
 print(instance)
 
 
-## pprint
+# pprint
 from pprint import pprint
-import requests
-
 pprint([x**2 for x in range(10)])
 
 
-## requests TODO
-## Async IO TODO
-## coverage.py TODO
+# requests TODO
+# Async IO TODO
+# coverage.py TODO
 
 ## Paths, Directories
 from pathlib import Path
@@ -149,7 +147,7 @@ with here.joinpath('requirements.txt').open() as reqs:
     return list([req.strip() for req in reqs if req.strip()])
 
 
-## Getting all the lines from a file and removing the '\n'
+# Getting all the lines from a file and removing the '\n'
 # 1 - pull the whole file into memory and split into lines without '\n':
 with open(filename) as f:
     mylist = f.read().splitlines()
@@ -158,20 +156,17 @@ with open(filename) as f:
 with open(filename) as f:
     alist = [line.rstrip() for line in f]
 
-## Check the existence of a variable
+# Check the existence of a variable
 # To check the existence of a local variable:
 if 'myVar' in locals():
   # myVar exists.
-# To check the existence of a global variable:
+    # To check the existence of a global variable:
 if 'myVar' in globals():
   # myVar exists.
-# To check if an object has an attribute:
+    # To check if an object has an attribute:
 if hasattr(obj, 'attr_name'):
   # obj.attr_name exists.
 
-
-## Web Server HTTP in current directory
-#   # python3 -m http.server 80
-
-# Python 2
-#   # python -m SimpleHttpServer 80
+# Web Server HTTP in current directory
+python3 -m http.server 80
+python -m SimpleHttpServer 80 # Python 2
