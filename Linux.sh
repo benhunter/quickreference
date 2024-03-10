@@ -85,6 +85,14 @@ echo $LINE | cut -c 1-50
 # Trim whitespace from a string
 wc -l < filename.txt | awk '{print $1}'
 
+# Arch Linux
+## Update EndeavourOS
+sudo pacman -Sy endeavouros-keyring
+sudo pacman -Syu
+# yay commands
+yay # Update
+yay -Ps # Summary of installed packages
+yay -Q # List installed packages
 
 # References
 # https://www.gnu.org/software/wget/manual/html_node/Recursive-Retrieval-Options.html
